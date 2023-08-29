@@ -28,26 +28,25 @@ int main() {
     for(int i=0;i<v.size();i++){
         cout<<v[i]<<" ";
     }
+    cout<<"\n";
 
     //you can also use the reverse() function to reverse a vector
     reverse(v.begin(),v.end());
     for(int i=0;i<v.size();i++){
         cout<<v[i]<<" ";
     }
+    cout<<"\n";
 
     //you can also use the sort() function to sort a vector
     sort(v.begin(),v.end());
     for(int i=0;i<v.size();i++){
         cout<<v[i]<<" ";
     }
+    cout<<"\n";
 
-    //you can also sort the vector in descending order
-    sort(v.rbegin(),v.rend());//reverse begin and reverse end
-    for(int i=0;i<v.size();i++){
-        cout<<v[i]<<" ";
-    }
 
-    //you can also use the find() function to find a specific element in a vector
+
+    //you can also use the find() function to find a specific element in a vector, note that find is computationally expensive for vectors, we will discuss afterwards why
     auto it=find(v.begin(),v.end(),5);
     cout<<*it<<endl;
     //find index of 5
@@ -58,6 +57,14 @@ int main() {
     for(int i=0;i<v.size();i++){
         cout<<v[i]<<" ";
     }
+    cout<<"\n";
+
+    //you can also sort the vector in descending order
+    sort(v.rbegin(),v.rend());//reverse begin and reverse end
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+    cout<<"\n";
 
     //you can also find the maximum element of the vector
     auto it2=max_element(v.begin(),v.end());
@@ -72,6 +79,19 @@ int main() {
     
     //you can also find the index of the minimum element
     cout<<it3-v.begin()<<endl;
+
+    //fill the vector with a particular value
+    fill(v.begin(),v.end(),5);
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+    v[0]=4;
+    v[5]=4;
+    //you can also use the count() function to count the number of occurences of a particular element in a vector
+    cout<<count(v.begin(),v.end(),4)<<endl;
+    cout<<endl;
+    //endl vs \n, endl flushes the output buffer, \n does not flush the output buffer
 
     return 0;
 }
