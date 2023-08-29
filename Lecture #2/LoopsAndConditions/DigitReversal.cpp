@@ -10,4 +10,9 @@ int main() {
         n/=10;
     }
     return 0;
+    
+    // string s=to_string(n); //this function converts a number to string
+    // reverse(s.begin(),s.end()); //this function reverses a string
+    // cout<<s<<endl;
+    
 }
