@@ -36,7 +36,12 @@ int main(){
 
 
     pair<double,char>p5={20.89894534234,'a'};
-    
+
+    pair<int,pair<int,int>>p7={1,{2,3}};
+    cout<<p7.first<<" "<<p7.second.first<<" "<<p7.second.second<<endl;
+
+    pair<pair<int,int>,pair<int,int>>p8={{1,2},{3,4}};
+    cout<<p8.first.first<<" "<<p8.first.second<<" "<<p8.second.first<<" "<<p8.second.second<<endl;
     
     return 0;
 }
